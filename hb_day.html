@@ -58,7 +58,7 @@
          <li id="lv1">☝️</li>
          <li id="lv2">✌️</li>
          <li id="lv3">👌</li>
-         <li id="lv4">💌</li>
+         <li id="lv4">✉️</li>
        </div>
 
        <p id="pesan2">Tunggu...</p>
@@ -117,8 +117,14 @@
   var opstanya = 'Ayo jawab😆';
   var tompositif = 'Mau Dong🤭';
   var tomnegatif = 'Engga Ah😒';
-    
-    async function menuju(){pesanwhatsapp = "Makasih udah ngucapin " + nama + " Ulang Tahun😊";await swals.fire('OK!', 'Kirim jawabannya ke WhatsApp aku, ya!', 'success');window.location = "https://api.whatsapp.com/send?phone=6282118269212&text=" + pesanwhatsapp;}
+    async function menuju() {
+    const pesanGmail = "";
+    const subject = "Sepucuk Kata";
+    const mailtoLink = "mailto:reka114141@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(pesanGmail);
+
+    await swals.fire('OK!', 'Kirim Sepucuk Kata Ke Email Aku Ya🙏', 'success');
+    window.location = mailtoLink;
+}
 </script>
 <script src="https://feeldreams.github.io/heihbd/script.js"></script>
 
